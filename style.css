@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #bedfe8;
+}
+.accordion{
+    max-width: 800px;
+}
+.accordion .content-box{
+    /* position: relative; */
+    margin: 10px 20px;
+
+}
+.accordion .content-box .lable {
+    position: relative;
+    padding: 10px;
+    background: #2694af;
+    color: white;
+    cursor: pointer;
+}
+.accordion .content-box .lable::after{
+    content: 'Show +';
+    position: absolute;
+    right: 3%;
+    font-size: 1rem;
+    bottom: 19%;
+
+}
+.accordion .content-box.active .lable::after{
+    content: 'Hide -';
+}
+.accordion .content-box .content{
+    /* position: relative; */
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+    overflow-y: auto;
+    background: white;
+}
+.accordion .content-box.active .content{
+    height: 100px;                                                                           
+    padding: 10px;
+}
+
+/* .content-box:hover{
+    transform: scale(1.1,1.1);
+    transition: .5s;
+}
+.accordion:hover > .content-box:not(:hover){
+    filter: blur(3px);
+    transform: scale(0.97,0.97);
+  
+} */
